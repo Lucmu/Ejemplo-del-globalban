@@ -15,7 +15,7 @@ const Schema = require("./Schemas/globalban.js")
 client.on("ready", async () => { console.log(`${client.user.tag} esta online`) })
 
 client.on("messageCreate", async (message) => {
-    if(message.author.bot || message.channel.type === "DM") return;
+    if(message.author.bot) return;
     let prefix = config.PREFIX;
     if(!prefix) return;
     if(!message.content.toLowerCase().startsWith(prefix)) return;
