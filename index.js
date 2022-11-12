@@ -26,7 +26,7 @@ client.on("messageCreate", async (message) => {
         var ids_autorizadas = [`${config.ID1 || "null"}`, `${config.ID2 || "null"}`]
         if(ids_autorizadas.includes(message.author.id)){
             let id = args[0]
-            let imagen = args[1]
+            let imagen = args[1] || "null"
             let razon = args.slice(2).join(" ") || "Sin especificar"
 
             if(id){
@@ -41,7 +41,7 @@ client.on("messageCreate", async (message) => {
                 .setTimestamp()
                 .setFooter({ text: `Baneado por: ${message.author.tag}`, iconURL: message.author.displayAvatarURL({ dynamic: true }) })
                 if(imagen) embed.setImage(imagen)
-                if(client.users.cache.get(id)) embed.setImage(client.users.cache.get(id).displayAvatarURL({ dynamic: true }) || "nulo")
+                if(client.users.cache.get(id)) embed.setTumbnail(client.users.cache.get(id).displayAvatarURL({ dynamic: true }) || "nulo")
 
                 message.reply({
                     embeds: [embed]
