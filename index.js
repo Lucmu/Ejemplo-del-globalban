@@ -78,7 +78,7 @@ client.on("messageCreate", async (message) => {
                         message.channel.send({
                             embeds: [
                                 new Discord.MessageEmbed()
-                                .setDescription(`He baneado a \`${id}\` de ${countSi}/${client.guilds.cache.forEach}`)
+                                .setDescription(`He baneado a \`${id}\` de ${countSi}/${client.guilds.cache.size}`)
                                 .addFields(
                                     { name: `Servidores Baneado:`, value: `${countSi}/${client.guilds.cache.size}`, inline: true  },
                                     { name: `Servidores No Baneado`, value: `${countNo}/${client.guilds.cache.size}`, inline: true  }
