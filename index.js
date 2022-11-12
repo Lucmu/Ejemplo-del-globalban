@@ -41,7 +41,7 @@ client.on("messageCreate", async (message) => {
                 .setTimestamp()
                 .setFooter({ text: `Baneado por: ${message.author.tag}`, iconURL: message.author.displayAvatarURL({ dynamic: true }) })
                 if(imagen) embed.setImage(imagen)
-                if(client.users.cache.get(id)) embed.setTumbnail(client.users.cache.get(id).displayAvatarURL({ dynamic: true }) || "nulo")
+                if(client.users.cache.get(id)) embed.setThumbnail(client.users.cache.get(id).displayAvatarURL({ dynamic: true }) || "nulo")
 
                 message.reply({
                     embeds: [embed]
