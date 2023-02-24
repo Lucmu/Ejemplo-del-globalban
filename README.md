@@ -16,4 +16,4 @@ node .
 - No abusar de este sistema
 - No uses siempre el instantban, ya que pueden limitarte el bot
 - No des permisos de ban a desconocidos
-- Darme creditos :) (opcional)
+- Darme creditos :) *(opcional)*
